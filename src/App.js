@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import ResultContainer from './containers/ResultContainer';
 
 function App() {
   return (
     <div className="App">
-      <p>Choixpeau</p>
+      <ResultContainer />
     </div>
   );
 }
