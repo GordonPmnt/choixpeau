@@ -5,9 +5,14 @@ const houses = [
     'Pouffsoufle',
 ]
 
-const reducer = (state, action) => ({
-    houses,
-    selectedHouses:  houses[Math.floor(Math.random() * 4)]
-})
+const reducer = (state, action) => {
+    if(action.type === 'UPDATE_CHOICE_WITH_MY_INDEX') {
+        return {
+            houses,
+            selectedHouses: houses[action.indexSelected]
+        }
+    }
+    return { houses }
+}
 
 export default reducer;
